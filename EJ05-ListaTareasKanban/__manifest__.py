@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Lista de tarea (Kanban)",  # Module title
-    'description': """Lista de tareas en formato Kanban""",  # You can also rst format
+    'description': """Lista de tareas en formato Kanbann""",  # You can also rst format
     'author': "",
     'website': "",
     'category': 'Project',
