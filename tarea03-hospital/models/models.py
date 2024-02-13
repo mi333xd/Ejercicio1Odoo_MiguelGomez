@@ -20,4 +20,4 @@ class HospitalDiagnosis(models.Model):
 
     patient_id = fields.Many2one('hospital.patient', string='Paciente', required=True)
     doctor_id = fields.Many2one('hospital.doctor', string='Médico', required=True)
-    diagnosis_text = fields.Text(string='Diagnotico')
+    diagnosis_text = fields.Text(string='Texto del Diagnóstico')
