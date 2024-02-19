@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="view_doctor_tree" model="ir.ui.view">
+    <field name="name">hospital.doctor.tree</field>
+    <field name="model">hospital.doctor</field>
+    <field name="arch" type="xml">
+        <tree string="Doctores">
+            <field name="name"/>
+            <field name="registration_number"/>
+        </tree>
+    </field>
+</record>
+
+<record id="view_doctor_form" model="ir.ui.view">
+    <field name="name">doctor.form</field>
+    <field name="model">hospital.doctor</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <group>
+                    <field name="name"/>
+                    <field name="registration_number"/>
+                </group>
+            </group>
+        </form>
+    </field>
+</record>
+
+<record id="action_doctor_list" model="ir.actions.act_window">
+    <field name="name">Doctores Lista</field>
+    <field name="res_model">hospital.doctor</field>
+    <field name="view_mode">tree,form</field>
+</record>
+  <menuitem id="menu_medico_list" name="Doctores Lista" parent="menu_main_root"
+            action="action_doctor_list" />
+    </data>
+</odoo>
