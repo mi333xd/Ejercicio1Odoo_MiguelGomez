@@ -19,4 +19,3 @@ class Hospital(models.Model):
     doctor_id = fields.Many2one('doctor')
     
     diagnostico = fields.Char(string= 'Diagnostico')
-

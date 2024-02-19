@@ -12,5 +12,4 @@ class Paciente(models.Model):
     _description = 'Paciente Model'
 
     name = fields.Char(string='Nombre y Apellido', required=True)
-    sintomas = fields.Char(string='Síntomas', required=true)
-
+    sintomas = fields.Char(string='Síntomas', required=True)
