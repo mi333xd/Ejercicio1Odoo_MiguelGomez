@@ -7,9 +7,3 @@ class Paciente(models.Model):
 
     name = fields.Char(string='Nombre y Apellido', required=True)
     sintomas = fields.Char(string='Síntomas', required=True)
-
-    _name = 'paciente'
-    _description = 'Paciente Model'
-
-    name = fields.Char(string='Nombre y Apellido', required=True)
-    sintomas = fields.Char(string='Síntomas', required=True)
