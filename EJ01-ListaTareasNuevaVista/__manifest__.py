@@ -29,7 +29,7 @@
         #El primer fichero indica la politica de acceso del modelo
         #Mas información en https://www.odoo.com/documentation/14.0/es/developer/howtos/rdtraining/05_securityintro.html
         'security/ir.model.access.csv',
-        #Cargamos las vistas y las plantillas
+        
         'views/views.xml',
     ]
 }

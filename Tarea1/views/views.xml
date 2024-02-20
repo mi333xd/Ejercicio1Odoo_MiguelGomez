@@ -6,7 +6,7 @@
             <field name="view_mode">tree,kanban,form,calendar</field>
         </record>
 
-                <!-- Vista Tree -->
+
         <record model="ir.ui.view" id="lista_tareas_tree_view">
             <field name="name">Tree</field>
             <field name="model">lista_tareas.lista</field>
@@ -23,7 +23,7 @@
             </field>
         </record>
 
-        <!-- Vista calendario -->
+        <!-- Vista calendariuo -->
         <record id="lista_tareas_calendar_view" model="ir.ui.view">
             <field name="name">Calendario</field>
             <field name="model">lista_tareas.lista</field>
@@ -60,6 +60,7 @@
                                     <field name="fecha_fin" string="Fecha fin" />
                                 </p>
                             </div>                    
+                            <!-- Plantilla QWeb para indicar como es la tarjeta Kanban-->
                             <div class="o_kanban_image_inner_pic">
                                 <img alt="nombre"
                                     t-att-src="kanban_image('lista_tareas.lista', 'imagen', record.id.raw_value)" />
@@ -70,13 +71,16 @@
             </field>
         </record>
 
-        <menuitem name="Tarea1" id="lista_tareas_menu_root" />
+        <!-- Nombre que vemos en las lista de modulos-->
+        <menuitem name="Tarea1-EDR" id="lista_tareas_menu_root" />
+        <!-- El elemento que esta en el projecto mismo como un menu con los differentes vistas-->
         <menuitem name="Vistas" id="lista_tareas_menu_1" parent="lista_tareas_menu_root" />
-
+        <!-- Las vistas Tree y Kanban-->
         <menuitem name="Tree" id="lista_tareas_menu_1_tree" parent="lista_tareas_menu_1"
             action="action_lista_tareas" />
         <menuitem name="Kanban" id="lista_tareas_menu_1_kanban" parent="lista_tareas_menu_1"
             action="action_lista_tareas" />
+
 
     </data>
 </odoo>

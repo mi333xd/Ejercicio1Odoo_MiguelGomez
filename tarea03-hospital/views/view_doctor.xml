@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Vista de lista -->
         <record id="view_doctor_tree" model="ir.ui.view">
             <field name="name">hospital.doctor.tree</field>
             <field name="model">hospital.doctor</field>
@@ -12,8 +11,6 @@
                 </tree>
             </field>
         </record>
-
-        <!-- Vista de formulario -->
         <record id="view_doctor_form" model="ir.ui.view">
             <field name="name">doctor.form</field>
             <field name="model">hospital.doctor</field>
@@ -28,15 +25,11 @@
                 </form>
             </field>
         </record>
-
-        <!-- Acción de ventana para la lista de doctores -->
         <record id="action_doctor_list" model="ir.actions.act_window">
             <field name="name">Doctores Lista</field>
             <field name="res_model">hospital.doctor</field>
             <field name="view_mode">tree,form</field>
         </record>
-
-        <!-- Menú para acceder a la lista de doctores -->
         <menuitem id="menu_medico_list" name="Doctores Lista" parent="menu_main_root"
             action="action_doctor_list" />
     </data>
