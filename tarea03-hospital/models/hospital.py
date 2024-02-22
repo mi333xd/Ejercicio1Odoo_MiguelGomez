@@ -1,5 +1,3 @@
-# hospital/models/diagnostico.py
-
 from odoo import models, fields
 
 class HospitalDiagnostico(models.Model):
@@ -8,4 +6,5 @@ class HospitalDiagnostico(models.Model):
 
     _paciente_id = fields.Many2one('hospital.paciente', string='Paciente')
     _doctor_id = fields.Many2one('hospital.doctor', string='Doctor')
-    diagnostico = fields.Text(string='Diagnóstico')
+    diagnostico = fields.Text(string='Diagnóstico' 
+    )

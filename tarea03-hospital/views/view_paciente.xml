@@ -10,6 +10,7 @@
                     <group>
                         <field name="name" />
                         <field name="sintomas" />
+                        <field name="_diagnosticos"/>
                     </group>
                 </sheet>
             </form>
@@ -23,6 +24,7 @@
             <tree string="Paciente">
                 <field name="name" />
                 <field name="sintomas" />
+                <field name="_diagnosticos"/>
             </tree>
         </field>
     </record>
