@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista Tree -->
+        <record id="view_modulo_tree" model="ir.ui.view">
+            <field name="name">modulo.tree.view</field>
+            <field name="model">instituto.modulo</field>
+            <field name="arch" type="xml">
+                <tree string="Módulos">
+                    <field name="name" string="Nombre"/>
+                    <field name="ciclo_ids" string="Ciclo Formativo"/>
+                    <field name="alumnos_ids" string="Alumnos Matriculados"/>
+                    <field name="profesor_id" string="Profesor"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Form -->
+        <record id="view_modulo_form" model="ir.ui.view">
+            <field name="name">modulo.form.view</field>
+            <field name="model">instituto.modulo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name" string="Nombre"/>
+                        <field name="ciclo_ids" string="Ciclo Formativo"/>
+                        <field name="alumnos_ids" string="Alumnos Matriculados"/>
+                        <field name="profesor_id" string="Profesor"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_modulo_list" model="ir.actions.act_window">
+            <field name="name">Módulo Lista</field>
+            <field name="res_model">instituto.modulo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

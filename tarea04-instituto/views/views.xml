@@ -1,60 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="tarea04-instituto.list">
-      <field name="name">Tarea04-Instituto list</field>
-      <field name="model">tarea04-instituto.tarea04-instituto</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
+    <data>
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="tarea04-instituto.action_window">
-      <field name="name">Tarea04-Instituto window</field>
-      <field name="res_model">tarea04-instituto.tarea04-instituto</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
+        <menuitem id="menu_estudios" name="Estudios" />
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="tarea04-instituto.action_server">
-      <field name="name">Tarea04-Instituto server</field>
-      <field name="model_id" ref="model_tarea04-instituto_tarea04-instituto"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+        <menuitem id="menu_ciclos" name="List Ciclos" parent="menu_estudios" action="action_ciclo_formativo_list" />
+        <menuitem id="menu_modulos" name="List Módulos" parent="menu_estudios" action="action_modulo_list" />
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="Tarea04-Instituto" id="tarea04-instituto.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="tarea04-instituto.menu_1" parent="tarea04-instituto.menu_root"/>
-    <menuitem name="Menu 2" id="tarea04-instituto.menu_2" parent="tarea04-instituto.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="tarea04-instituto.menu_1_list" parent="tarea04-instituto.menu_1"
-              action="tarea04-instituto.action_window"/>
-    <menuitem name="Server to list" id="tarea04-instituto" parent="tarea04-instituto.menu_2"
-              action="tarea04-instituto.action_server"/>
--->
-  </data>
+        <menuitem id="menu_personas" name="Personas" />
+
+        <menuitem id="menu_alumnos" name="List Alumnos" parent="menu_personas" action="action_alumno_list" />
+        <menuitem id="menu_profesores" name="List Profesores" parent="menu_personas" action="action_profesor_list" />
+
+    </data>
 </odoo>

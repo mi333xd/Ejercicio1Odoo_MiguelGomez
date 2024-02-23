@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tarea04-instituto_tarea04-instituto,tarea04-instituto.tarea04-instituto,model_tarea04-instituto_tarea04-instituto,base.group_user,1,1,1,1
+access_tarea04-instituto_tarea04-instituto,Tarea04 Instituto Access,instituto.modulo,base.group_user,1,1,1,1

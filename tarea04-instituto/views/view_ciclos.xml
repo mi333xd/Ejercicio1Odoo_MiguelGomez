@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista Tree-->
+        <record id="view_ciclo_formativo_tree" model="ir.ui.view">
+            <field name="name">ciclo_formativo.tree.view</field>
+            <field name="model">instituto.ciclo_formativo</field>
+            <field name="arch" type="xml">
+                <tree string="Ciclos Formativos">
+                    <field name="name" string="Nombre"/>
+                    <field name="modulos_ids" string="Módulos"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Form-->
+        <record id="view_ciclo_formativo_form" model="ir.ui.view">
+            <field name="name">ciclo_formativo.form.view</field>
+            <field name="model">instituto.ciclo_formativo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name" string="Nombre"/>
+                        <field name="modulos_ids"  string="Módulos"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ciclo_formativo_list" model="ir.actions.act_window">
+            <field name="name">Ciclo Formativo Lista</field>
+            <field name="res_model">instituto.ciclo_formativo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>
